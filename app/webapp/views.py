@@ -21,9 +21,9 @@ def add_entry_view(request):
                 return redirect('index')
             except:
                 form.add_error(None, 'Ошибка добавления поста')
+
     else:
         form = EntryForm()
-
     context = {
         'form': form,
     }
@@ -31,15 +31,18 @@ def add_entry_view(request):
 
 
 def edit_entry_view(request, pk):
-    guest_book = get_object_or_404(GuestBook, pk=pk)
-    if request.method == 'GET':
-        return render(request, 'edit_entry.html', context={'guest_book': guest_book})
-    elif request.method == 'POST':
-        guest_book.name = request.POST.get('name')
-        guest_book.mail = request.POST.get('mail')
-        guest_book.text = request.POST.get('text')
-        guest_book.save()
-        return redirect('index', pk=guest_book.pk)
+    guest_books = get_object_or_404(GuestBook, pk=pk)
+    if request.method == "GET":
+        context = {
+            "guest_books": guest_books
+        }
+        return render(request, 'edit_entry.html', context)
+    elif request.method == "POST":
+        guest_books.name = request.POST.get("name")
+        guest_books.mail = request.POST.get("mail")
+        guest_books.text = request.POST.get("text")
+        guest_books.save()
+        return redirect('index')
 
 
 def delete_entry_view(request, pk):

@@ -7,7 +7,7 @@
     <h1 class="delete_title">Вы точно хотите удалить запись?</h1>
     <form class="delete_form" method="POST" action="{% url 'delete_entry' guest_book.pk %}">
         {% csrf_token %}
-        <input class="btn green" type="submit" value="Confirm">
-        <a class="btn red" href="{% url 'index' %}">Cancel</a>
+        <input class="btn green" type="submit" value="Подтвердить">
+        <a class="btn red" href="{% url 'index' %}">Отмена</a>
     </form>
 {% endblock %}

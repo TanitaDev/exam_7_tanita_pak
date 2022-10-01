@@ -6,6 +6,6 @@
 <div>{{form.non_field_errors}}</div>
 <form action="{% url 'add' %}" method="post">
     {% include 'partial/book_form.html' %}
-    <input class="btn green" type="submit" placeholder="Добавить">
+    <input class="btn green" type="submit" value="Добавить">
 </form>
 {% endblock %}
