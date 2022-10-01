@@ -20,5 +20,7 @@ from webapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view, name='index')
+    path('', index_view, name='index'),
+    path('add/', add_entry_view, name='add'),
+    path('edit/', edit_entry_view, name='edit'),
 ]
