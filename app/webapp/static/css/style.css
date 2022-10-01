@@ -99,3 +99,38 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     display: flex;
     justify-content: space-between;
 }
+
+.header {
+    padding: 40px 50px 10px 50px;
+}
+
+.header nav ul li{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header nav ul li a {
+    color: #ffffff;
+    font-size: 18px;
+    transition: all ease 0.3s;
+    margin: 0px 10px;
+}
+
+.header nav ul li a:hover {
+    color: #FF6666;
+}
+
+.delete_title {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+.delete_form {
+    text-align: center;
+}
+
+.delete_form .btn{
+    margin: 0px 10px;
+}
+

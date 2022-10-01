@@ -1,25 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-    <title>Home</title>
-</head>
-<body>
-<div class="wrapper">
-    <h2 class="main_title">Гостевая книга</h2>
-    <div class="main_block">
-        <div>{{form.non_field_errors}}</div>
-        <form method="POST" action="{% url 'edit_entry' guest_book.pk %}">
-        {% csrf_token %}
-        <p><label>Имя</label> <input type="text" name="title" value="{{ guest_book.name }}"></p>
-        <p><label>Мыло</label> <input type="text" name="author" value="{{ guest_book.mail }}"></p>
-        <p><label>Текст</label> <textarea name="text">{{ guest_book.text }}</textarea></p>
-        <p><input type="submit" value="Submit"></p>
-    </form>
-    </div>
-</div>
-</body>
-</html>
+{% block add_new_link %}
+<i class="fa-regular fa-plus"></i> Добавить новую запись
+{% endblock %}
+{% block book_item %}
+<div>{{form.non_field_errors}}</div>
+<form method="POST" action="{% url 'edit_entry' guest_book.pk %}">
+    {% csrf_token %}
+    <p><label>Имя</label> <input type="text" name="title" value="{{ guest_book.name }}"></p>
+    <p><label>Мыло</label> <input type="text" name="author" value="{{ guest_book.mail }}"></p>
+    <p><label>Текст</label> <textarea name="text">{{ guest_book.text }}</textarea></p>
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
