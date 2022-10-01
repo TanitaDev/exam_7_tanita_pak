@@ -5,8 +5,7 @@
 {% block book_item %}
 <div>{{form.non_field_errors}}</div>
 <form action="{% url 'add' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
+    {% include 'partial/book_form.html' %}
     <input class="btn green" type="submit" placeholder="Добавить">
 </form>
 {% endblock %}

@@ -7,9 +7,9 @@
 <div>{{form.non_field_errors}}</div>
 <form method="POST" action="{% url 'edit_entry' guest_book.pk %}">
     {% csrf_token %}
-    <p><label>Имя</label> <input type="text" name="title" value="{{ guest_book.name }}"></p>
-    <p><label>Мыло</label> <input type="text" name="author" value="{{ guest_book.mail }}"></p>
-    <p><label>Текст</label> <textarea name="text">{{ guest_book.text }}</textarea></p>
-    <p><input type="submit" value="Submit"></p>
+    {% for f in form %}
+    <p class="input_item"><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+    {% endfor %}
+    <input class="btn green" type="submit" placeholder="Добавить">
 </form>
 {% endblock %}
