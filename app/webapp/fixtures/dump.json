@@ -1,0 +1,80 @@
+[
+{
+  "model": "webapp.guestbook",
+  "pk": 1,
+  "fields": {
+    "name": "Танита",
+    "mail": "tanita@mail.ru",
+    "text": "Хорошие отзывы",
+    "create_at": "2022-10-01T06:54:45.283Z",
+    "updated_at": "2022-10-01T06:54:45.283Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 2,
+  "fields": {
+    "name": "Максим",
+    "mail": "maksim@mail.ru",
+    "text": "Средний отзыв",
+    "create_at": "2022-10-01T07:10:23.177Z",
+    "updated_at": "2022-10-01T07:10:23.177Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 3,
+  "fields": {
+    "name": "Владимир",
+    "mail": "vladimir@mail.ru",
+    "text": "Плохой отзыв",
+    "create_at": "2022-10-01T07:10:43.392Z",
+    "updated_at": "2022-10-01T07:10:43.392Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 4,
+  "fields": {
+    "name": "Александр",
+    "mail": "alex@mail.ru",
+    "text": "Всё понравилось",
+    "create_at": "2022-10-01T07:11:25.682Z",
+    "updated_at": "2022-10-01T07:11:25.682Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guestbook",
+  "pk": 5,
+  "fields": {
+    "name": "Айбек",
+    "mail": "aibek@mail.ru",
+    "text": "Жду обратной связи",
+    "create_at": "2022-10-01T07:12:01.562Z",
+    "updated_at": "2022-10-01T07:12:01.562Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$tjkkpK1ZQIz85annOvQGTd$b6JE4sWU6clgwplaDYE+QP8Fu9/ME/shShrlRlu3aTo=",
+    "last_login": "2022-10-01T07:09:49.118Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-01T06:44:18.490Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
