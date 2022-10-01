@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view, name='index'),
     path('add/', add_entry_view, name='add'),
-    path('edit/', edit_entry_view, name='edit'),
+    path('<int:pk>/edit', edit_entry_view, name='edit_entry'),
+    path('<int:pk>/delete/', delete_entry_view, name='delete_entry')
 ]
